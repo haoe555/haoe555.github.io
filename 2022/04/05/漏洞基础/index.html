@@ -14,14 +14,14 @@
 <meta property="og:site_name" content="haoe">
 <meta property="og:description" content="SQL盲注注入概念：在不知道数据库返回值的情况下，对数据中的内容进行猜测，实施SQL注入。盲注一般分为布尔盲注和基于时间的盲注，以及报错的盲注。 可能用到的函数： Length()函数   返回字符串的长度 Substr()截取字符串从1开始 Ascii() 返回字符串的ascii码  sqlmap自动注入例题：ctfhubSQL注入布尔盲注 链接：https:&#x2F;&#x2F;www.ctfhub.com&#x2F;#">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="c:/Users/happy/OneDrive/图片/屏幕快照/Screenshot_2022-04-09_10_29_23.png">
-<meta property="og:image" content="c:/Users/happy/OneDrive/图片/屏幕快照/Screenshot_2022-04-09_11_10_46.png">
-<meta property="og:image" content="c:/Users/happy/OneDrive/图片/屏幕快照/Screenshot_2022-04-09_11_14_03.png">
+<meta property="og:image" content="https://img.le1a.com/2022/04/09/9c38ddf4c4bf6.png">
+<meta property="og:image" content="https://img.le1a.com/2022/04/09/b0d432090354b.png">
+<meta property="og:image" content="https://img.le1a.com/2022/04/09/b65ba15583869.png">
 <meta property="article:published_time" content="2022-04-05T14:24:38.566Z">
-<meta property="article:modified_time" content="2022-04-10T04:12:39.388Z">
+<meta property="article:modified_time" content="2022-04-10T04:22:37.484Z">
 <meta property="article:author" content="haoe555">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:/Users/happy/OneDrive/图片/屏幕快照/Screenshot_2022-04-09_10_29_23.png">
+<meta name="twitter:image" content="https://img.le1a.com/2022/04/09/9c38ddf4c4bf6.png">
   
     <link rel="alternate" href="/atom.xml" title="haoe" type="application/atom+xml">
   
@@ -108,13 +108,13 @@
 <p>eg:<a target="_blank" rel="noopener" href="http://challenge-16d2f4968e269cfb.sandbox.ctfhub.com:10800/,%E8%BF%99%E7%A7%8D%EF%BC%8C%E6%BC%8FNO">http://challenge-16d2f4968e269cfb.sandbox.ctfhub.com:10800/,这种，漏NO</a></p>
 <p>eg:<a target="_blank" rel="noopener" href="http://challenge-16d2f4968e269cfb.sandbox.ctfhub.com:10800/?id=1%EF%BC%8C%E8%BF%99%E7%A7%8D%EF%BC%8CYES">http://challenge-16d2f4968e269cfb.sandbox.ctfhub.com:10800/?id=1，这种，YES</a></p>
 <p>这里有数据库的相关信息，如图：</p>
-<p><img src="C:\Users\happy\OneDrive\图片\屏幕快照\Screenshot_2022-04-09_10_29_23.png"></p>
+<p><img src="https://img.le1a.com/2022/04/09/9c38ddf4c4bf6.png"></p>
 <p><strong>sqlmap -u “url” –dbs –batch</strong></p>
 <p>输入指令，看它提供的数据库名称</p>
-<p><img src="C:\Users\happy\OneDrive\图片\屏幕快照\Screenshot_2022-04-09_11_10_46.png"></p>
+<p><img src="https://img.le1a.com/2022/04/09/b0d432090354b.png"></p>
 <p>看打*部分可知，数据库为 sqli</p>
 <p>-D这个参数是用来进入数据库的，通常要配合–tables使用（语法）<br>$$<br>sqlmap -u “url” –dbs -D 数据库名称 –tables –batch<br>$$<br>–tables 这个参数是用来显示当前数据库的表（就是这个命令）</p>
-<p><img src="C:\Users\happy\OneDrive\图片\屏幕快照\Screenshot_2022-04-09_11_14_03.png"><br>$$<br><strong>sqlmap -u “url” –dbs -D 数据库名称 –tables -T 表名 –columns –dump –batch</strong><br>$$<br>–dump是导出</p>
+<p><img src="https://img.le1a.com/2022/04/09/b65ba15583869.png"><br>$$<br><strong>sqlmap -u “url” –dbs -D 数据库名称 –tables -T 表名 –columns –dump –batch</strong><br>$$<br>–dump是导出</p>
 <p>即可获得flag</p>
 
       
